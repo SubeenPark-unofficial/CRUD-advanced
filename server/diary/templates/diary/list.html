@@ -9,7 +9,11 @@
     <h1>안녕 장고 친구들!</h1>
     <ul>
         {% for article in articles %}
-            <li>{{ article.title }}</li>
+            <li>
+                <a href="{% url "diary:article_read" article.id%}">
+                    {{ article.title }}
+                </a>
+            </li>
         {% endfor %}
     </ul>
     

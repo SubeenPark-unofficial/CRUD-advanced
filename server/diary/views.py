@@ -11,3 +11,11 @@ def article_list(request):
         'articles': articles,
     }
     return render(request, 'diary/list.html', context=context)
+
+
+def article_read(request, pk):
+    article = Article.objects.get(id=pk)
+    context = {
+        'article': article,
+    }
+    return render(request, 'diary/read.html', context=context)
