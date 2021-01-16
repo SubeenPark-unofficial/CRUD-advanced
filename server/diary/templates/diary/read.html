@@ -7,6 +7,12 @@
 </head>
 <body>
     <h2>{{ article.title }}</h2>
+    <a href="{% url "diary:article_update" article.id%}">일기 수정하기</a>
+    <br />
+    <form action="{% url "diary:article_delete" article.id %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="일기 삭제하기" />
+    </form>
     <p>{{ article.content }}</p>
 </body>
 </html>

@@ -7,6 +7,9 @@
 </head>
 <body>
     <h1>안녕 장고 친구들!</h1>
+
+    <a href="{% url "diary:article_create" %}">일기 쓰기</a>
+
     <ul>
         {% for article in articles %}
             <li>
