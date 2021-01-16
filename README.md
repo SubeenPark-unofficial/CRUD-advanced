@@ -1,0 +1,1 @@
+- all django related files are located in `server` directory
