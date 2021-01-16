@@ -6,7 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>안녕 장고 친구들</h1>
+    <h1>안녕 장고 친구들!</h1>
+    <ul>
+        {% for article in articles %}
+            <li>{{ article.title }}</li>
+        {% endfor %}
+    </ul>
     
 </body>
 </html>
